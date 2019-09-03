@@ -5,3 +5,7 @@ module.exports = {
         cordova.exec(successCallback, errorCallback, "Hello", "greet", [name]);
     }
 };
+
+window.handleOpenURL=(function (url){ //override the default handler
+   window.openedViaDeeplink = url;
+});
